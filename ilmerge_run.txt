@@ -1,0 +1,1 @@
+ilmerge /t:library /targetplatform:v2,C:/Windows/Microsoft.NET/Framework64/v2.0.50727 /wildcards /out:update.dll GitUpdate.dll RestSharp.dll
