@@ -7,3 +7,12 @@ C:\Users\Atechnology\Documents\SharpDevelop Projects\GitUpdate\GitUpdate\obj\Deb
 C:\Users\Atechnology\Documents\SharpDevelop Projects\GitUpdate\GitUpdate\bin\Debug\GitUpdate.dll.config
 C:\Users\Atechnology\Documents\SharpDevelop Projects\GitUpdate\GitUpdate\bin\Debug\GitUpdate.dll
 C:\Users\Atechnology\Documents\SharpDevelop Projects\GitUpdate\GitUpdate\obj\Debug\GitUpdate.dll
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.pdb
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\RestSharp.dll
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.csprojResolveAssemblyReference.cache
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.MainForm.resources
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.csproj.GenerateResource.Cache
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.pdb
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.dll.config
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.dll
+C:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.dll

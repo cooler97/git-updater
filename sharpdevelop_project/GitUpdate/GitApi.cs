@@ -8,7 +8,7 @@ namespace GitUpdate
 
     public class GitApi
     {
-        const string OAUTH_TOKEN = "f15da2a9291aaab0fa4d281ce46cebf4b34f25ba";
+        const string OAUTH_TOKEN = "16e335be74999ef1e08edd14ce603f2da392fa2d";
         const string USER_AGENT = "okno.rf app";
         
         const string ApiUrl = "https://api.github.com";

@@ -22,10 +22,10 @@ namespace GitUpdate
 
             //            Utils.CheckInternetConnection();
 //
-            //                        Updater upd = new Updater("C:\\");
-            //                        this.descriptionBox.Text = upd.GetReadme();
-            //                        upd.CheckSetting();
-            //                        upd.SaveSetting();
+//                                    Updater upd = new Updater("C:\\");
+//                                    this.descriptionBox.Text = upd.GetReadme();
+//                                    upd.CheckSetting();
+//                                    upd.SaveSetting();
         }
         
         public void SetDescription(string text)

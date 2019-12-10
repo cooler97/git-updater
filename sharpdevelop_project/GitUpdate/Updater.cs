@@ -54,6 +54,8 @@ namespace GitUpdate
         public string GetReadme()
         {
             Content readme = gitApi.GetReadme();
+            if(String.IsNullOrEmpty(readme.ContentString))
+                return "Ошибка обращения к репозиторию, проблема с ключами?";
             byte[] data = System.Convert.FromBase64String(readme.ContentString);
             return System.Text.UTF8Encoding.UTF8.GetString(data);
         }
@@ -89,6 +91,7 @@ namespace GitUpdate
                     {
                         data = gitApi.Download(content.Path);
                         File.WriteAllBytes(path, data);
+                        lastSaveFilePath = path;
                         result = true;
                     }
                 }
@@ -99,6 +102,7 @@ namespace GitUpdate
                     if(checkSum.Equals(content.Sha))
                     {
                         File.WriteAllBytes(path, data);
+                        lastSaveFilePath = path;
                         result = true;
                     }
                 }
@@ -107,7 +111,6 @@ namespace GitUpdate
                 MessageBox.Show(e.Message + "\\n" + e.InnerException);
             }
             
-            lastSaveFilePath = path;
             return result;
         }
         
