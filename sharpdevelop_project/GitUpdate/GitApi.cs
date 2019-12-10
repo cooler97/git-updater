@@ -8,7 +8,6 @@ namespace GitUpdate
 
     public class GitApi
     {
-        const string OAUTH_TOKEN = "16e335be74999ef1e08edd14ce603f2da392fa2d";
         const string USER_AGENT = "okno.rf app";
         
         const string ApiUrl = "https://api.github.com";
@@ -18,9 +17,13 @@ namespace GitUpdate
 
         readonly IRestClient _client;
         readonly IRestClient _clientContent;
+        
+        private string accessToken;
 
-        public GitApi()
+        public GitApi(string accessToken)
         {
+            this.accessToken = accessToken;
+            
             _client = new RestClient(ApiUrl);
             _client.UserAgent = USER_AGENT;
             
@@ -72,7 +75,7 @@ namespace GitUpdate
         private RestRequest GetRequest(string resource)
         {
             RestRequest request = new RestRequest(resource);
-            request.AddHeader("Authorization", String.Format("token {0}", OAUTH_TOKEN));
+            request.AddHeader("Authorization", String.Format("token {0}", accessToken));
             return request;
         }
 

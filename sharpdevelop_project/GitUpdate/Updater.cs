@@ -25,10 +25,10 @@ namespace GitUpdate
         
         private List<Content> settingList = new List<Content>();
         
-        public Updater(string rootDirectory)
+        public Updater(string rootDirectory, string accessToken)
         {
             this.rootDirectory = rootDirectory;
-            gitApi = new GitApi();
+            gitApi = new GitApi(accessToken);
         }
         
         public List<Content> CheckSettingsUpdate()
