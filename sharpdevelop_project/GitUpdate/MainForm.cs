@@ -23,7 +23,7 @@ namespace GitUpdate
 //                        Utils.SendErrorEmailToHelpDesk();
 //                        return;
 //
-                                    Updater upd = new Updater("C:\\Program Files", "946c21ebe52cd0a4b94c0c411c9b04b008ea220d");
+                                    Updater upd = new Updater("C:\\Program Files", "");
                                     this.descriptionBox.Text = upd.GetReadme();
                                     string sha = upd.CheckSetting();
                                     upd.SaveSetting();
