@@ -108,7 +108,6 @@ namespace GitUpdate
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Проверка обновления";
             this.TopMost = true;

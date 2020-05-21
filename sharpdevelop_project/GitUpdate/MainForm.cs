@@ -20,12 +20,13 @@ namespace GitUpdate
         {
             DialogResult = DialogResult.OK;
 
-            //            Utils.CheckInternetConnection();
+//                        Utils.SendErrorEmailToHelpDesk();
+//                        return;
 //
-//                                    Updater upd = new Updater("C:\\");
-//                                    this.descriptionBox.Text = upd.GetReadme();
-//                                    upd.CheckSetting();
-//                                    upd.SaveSetting();
+                                    Updater upd = new Updater("C:\\Program Files", "946c21ebe52cd0a4b94c0c411c9b04b008ea220d");
+                                    this.descriptionBox.Text = upd.GetReadme();
+                                    string sha = upd.CheckSetting();
+                                    upd.SaveSetting();
         }
         
         public void SetDescription(string text)

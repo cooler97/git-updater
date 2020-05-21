@@ -82,16 +82,18 @@ namespace GitUpdate
             string checkSum = String.Empty;
             byte[] data;
             
+            lastSaveFilePath = path;
+            
             try
             {
                 if(File.Exists(path)){
                     data = File.ReadAllBytes(path);
                     checkSum = ComputeHashCode(data, content.Size);
+                    
                     if(!checkSum.Equals(content.Sha))
                     {
                         data = gitApi.Download(content.Path);
                         File.WriteAllBytes(path, data);
-                        lastSaveFilePath = path;
                         result = true;
                     }
                 }
@@ -99,10 +101,10 @@ namespace GitUpdate
                 {
                     data = gitApi.Download(content.Path);
                     checkSum = ComputeHashCode(data, content.Size);
+                    
                     if(checkSum.Equals(content.Sha))
                     {
                         File.WriteAllBytes(path, data);
-                        lastSaveFilePath = path;
                         result = true;
                     }
                 }
@@ -138,17 +140,20 @@ namespace GitUpdate
         }
         
         public string CheckSetting(){
-            settingList = this.CheckSettingsUpdate();
+            List<Content> tempContent = this.CheckSettingsUpdate();
+            settingList = new List<Content>();
             
-            for(int count = settingList.Count - 1; count >= 0; count--)
+            for(int count = tempContent.Count - 1; count >= 0; count--)
             {
-                if(settingList[count].Name == "readme.txt"){
-                    settingList.Remove(settingList[count]);
+                if(tempContent[count].Name == "readme.txt"){
+                    tempContent.Remove(tempContent[count]);
                 }
             }
             
-            if(settingList.Count != 1)
+            if(tempContent.Count != 1)
                 return null;
+            
+            settingList.Add(tempContent[0]);
             
             return settingList.ToArray()[0].Sha;
         }

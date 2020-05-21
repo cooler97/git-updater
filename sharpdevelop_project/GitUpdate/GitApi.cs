@@ -5,7 +5,6 @@ using RestSharp;
 
 namespace GitUpdate
 {
-
     public class GitApi
     {
         const string USER_AGENT = "okno.rf app";
@@ -30,16 +29,18 @@ namespace GitUpdate
             _clientContent = new RestClient(RawUrl);
             _clientContent.UserAgent = USER_AGENT;
             
-            ServicePointManager.SecurityProtocol = SecurityProtocolTypeExtensions.Tls12 | SecurityProtocolTypeExtensions.Tls11;
+            //            ServicePointManager.SecurityProtocol = SecurityProtocolTypeExtensions.Tls12 | SecurityProtocolTypeExtensions.Tls11;
+
+            ServicePointManager.SecurityProtocol = SecurityProtocolTypeExtensions.Tls12;
         }
 
         private T Execute<T>(RestRequest request) where T : new()
         {
             var response = _client.Execute<T>(request);
-            
+
             if (response.ErrorException != null)
             {
-                const string message = "Error retrieving response.  Check inner details for more info.";
+                const string message = "Error retrieving response. Check inner details for more info.";
                 Exception gitException = new Exception(message, response.ErrorException);
                 throw gitException;
             }
