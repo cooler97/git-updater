@@ -9,7 +9,12 @@ namespace GitUpdate
 		{
 			InitializeComponent();
 		}
-
+		
+		public void SetDescription(string text)
+		{
+			descriptionBox.Text = text;
+		}
+		
 		void Label2Click(object sender, EventArgs e)
 		{
 			this.Close();
