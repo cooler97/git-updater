@@ -18,17 +18,7 @@ namespace GitUpdate
 		void Label1Click(object sender, EventArgs e)
 		{
 			DialogResult = DialogResult.OK;
+		}
+    }
 
-			//remove before commit
-//			Updater upd = new Updater("C:\\", "");
-//			this.descriptionBox.Text = upd.GetReadme();
-//			string sha = upd.CheckSetting();
-//			upd.SaveSetting();
-		}
-		
-		public void SetDescription(string text)
-		{
-			this.descriptionBox.Text = text;
-		}
-	}
 }
