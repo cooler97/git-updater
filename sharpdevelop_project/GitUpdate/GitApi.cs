@@ -45,6 +45,7 @@ namespace GitUpdate
 			{
 				updater.error = e;
 				Utils.SendErrorEmailToHelpDesk(e);
+				return default(T);
 			}
 
 			if (response.ErrorException != null)
@@ -53,7 +54,9 @@ namespace GitUpdate
 				Exception e = new Exception(message, response.ErrorException);
 				updater.error = e;
 				Utils.SendErrorEmailToHelpDesk(e);
+				return default(T);
 			}
+			
 			return response.Data;
 		}
 		

@@ -76,6 +76,11 @@ namespace GitUpdate
 			try
 			{
 				contentList = gitApi.GetUpdate(dir);
+				
+				if(contentList == null)
+				{
+					return new List<Content>();
+				}
 			}
 			catch(Exception e){
 				error = e;
