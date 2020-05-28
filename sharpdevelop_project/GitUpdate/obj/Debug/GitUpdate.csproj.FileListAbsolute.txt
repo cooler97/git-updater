@@ -54,6 +54,6 @@ E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\DevExpress.XtraV
 E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\DevExpress.XtraLayout.v8.2.dll
 E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\ICSharpCode.SharpZipLib.dll
 E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\log4net.dll
-E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.dll.config
-E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.dll
-E:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.dll
+E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.exe.config
+E:\develop\git-updater\sharpdevelop_project\GitUpdate\bin\Debug\GitUpdate.exe
+E:\develop\git-updater\sharpdevelop_project\GitUpdate\obj\Debug\GitUpdate.exe

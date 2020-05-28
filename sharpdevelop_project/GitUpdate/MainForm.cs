@@ -22,6 +22,15 @@ namespace GitUpdate
 		
 		void Label1Click(object sender, EventArgs e)
 		{
+			
+			Updater upd = new Updater("", "");
+			
+			if(!upd.EnabledTlsSupport())
+				return;
+			
+			
+			SetDescription(upd.GetReadme());
+			
 			DialogResult = DialogResult.OK;
 		}
     }

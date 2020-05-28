@@ -29,7 +29,7 @@ namespace GitUpdate
 		public Updater(string rootDirectory, string accessToken)
 		{
 			this.rootDirectory = rootDirectory;
-			gitApi = new GitApi(accessToken, this);
+			gitApi = new GitApi(/*accessToken*/ "", this);
 		}
 		
 		public Exception GetError()
@@ -201,7 +201,7 @@ namespace GitUpdate
 		{
 			try
 			{
-				ServicePointManager.SecurityProtocol = SecurityProtocolTypeExtensions.Tls12;
+				ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolTypeExtensions.Tls11 | SecurityProtocolTypeExtensions.Tls12;
 			}
 			catch(Exception e)
 			{
