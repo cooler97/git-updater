@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using RestSharp;
+using RestSharp.Authenticators;
 
 namespace GitUpdate
 {
@@ -24,11 +25,15 @@ namespace GitUpdate
 		{
 			this.accessToken = accessToken;
 			
+			IAuthenticator auth = new HttpBasicAuthenticator(login, accessToken);
+			
 			_client = new RestClient(ApiUrl);
 			_client.UserAgent = USER_AGENT;
+			_client.Authenticator = auth;
 			
 			_clientContent = new RestClient(RawUrl);
 			_clientContent.UserAgent = USER_AGENT;
+			_clientContent.Authenticator = auth;
 			
 			this.updater = updater;
 		}
@@ -89,7 +94,7 @@ namespace GitUpdate
 		private RestRequest GetRequest(string resource)
 		{
 			RestRequest request = new RestRequest(resource);
-			request.AddHeader("Authorization", String.Format("token {0}", accessToken));
+//			request.AddHeader("Authorization", String.Format("token {0}", accessToken));
 			return request;
 		}
 
