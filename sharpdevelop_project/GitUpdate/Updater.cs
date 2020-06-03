@@ -29,7 +29,7 @@ namespace GitUpdate
 		public Updater(string rootDirectory, string accessToken)
 		{
 			this.rootDirectory = rootDirectory;
-			gitApi = new GitApi(/*accessToken*/ "", this);
+			gitApi = new GitApi(accessToken, this);
 		}
 		
 		public Exception GetError()
@@ -116,6 +116,7 @@ namespace GitUpdate
 				
 				if(isFileExist && !hashCode.Equals(content.Sha))
 				{
+					data = gitApi.Download(content.Path);
 					File.WriteAllBytes(path, data);
 					result = true;
 				}

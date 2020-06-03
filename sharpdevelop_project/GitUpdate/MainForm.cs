@@ -22,6 +22,14 @@ namespace GitUpdate
 		
 		void Label1Click(object sender, EventArgs e)
 		{
+			
+			/*Updater upd = new Updater("C:\\", "ACCESS_TOKEN_NEED_HERE");
+			
+			upd.EnabledTlsSupport();
+			
+			upd.CheckSetting();
+			upd.SaveSetting();*/
+			
 			DialogResult = DialogResult.OK;
 		}
 	}
